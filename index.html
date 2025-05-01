@@ -3,61 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>صور مع وصف</title>
+    <title>صور بكلمات حلوة</title>
     <style>
         body {
             text-align: center;
-            font-family: Arial, sans-serif;
+            font-family: 'Cairo', sans-serif;
+            background: linear-gradient(to right, #f3e7e9, #e3eeff);
+            margin: 0;
+            padding: 20px;
+            color: #333;
         }
-        img {
-            width: 200px;
-            margin: 10px;
-            cursor: pointer;
-            border-radius: 10px;
+
+        h1 {
+            color: #444;
+            margin-bottom: 30px;
+        }
+
+        .img-card {
+            display: inline-block;
+            background: white;
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            margin: 15px;
             transition: 0.3s;
         }
-        img:hover {
-            transform: scale(1.1);
+
+        .img-card:hover {
+            transform: scale(1.05);
         }
+
+        img {
+            width: 220px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
         #descBox {
             display: none;
-            background: rgba(0, 0, 0, 0.8);
+            background: rgba(0, 0, 0, 0.85);
             color: white;
-            padding: 20px;
+            padding: 25px;
             position: fixed;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            border-radius: 10px;
+            border-radius: 15px;
             text-align: center;
-            width: 300px;
+            width: 320px;
+            font-size: 18px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            z-index: 999;
         }
+
         #descBox button {
-            margin-top: 10px;
-            padding: 5px 10px;
-            background: red;
+            margin-top: 15px;
+            padding: 8px 15px;
+            background: crimson;
             color: white;
             border: none;
             cursor: pointer;
-            border-radius: 5px;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        #descBox button:hover {
+            background: darkred;
         }
     </style>
 </head>
 <body>
 
-    <h1>اضغط على أي صورة لعرض الوصف</h1>
+    <h1>اضغط على صورة تقربلك وتستحق كلمة حلوة</h1>
 
-     <img src="bird.jpg" onclick="showDescription('Aho el 3sfora de cute w 3asal zayk kda bzbt')">
-         <img src="sea.jpg" onclick="showDescription('El mkan da 3amel zayk kda bzbt howa mkan deep gdn lw baseti mn kol na7ya ba7r mlyan details w 7ekayat w 7agat deep bs enty btkoni wa5da el qrar enk tfdli fo2 3la el gzera de bs awl lma trta7i btnoti w tnzli w t2oli el 7agat el deep')">
-          <img src="white.jpg" onclick="showDescription('lon abyad da aktr 7aga lay2a 3liki 7aga ndefa pure mlyana 7ob w gmal')">
-     <img src="winter.jpg" onclick="showDescription('Aho el 4eta da byfrni beki kda motqlb el a7wal el gwaya zayk kda')">
-         <img src="yasmin.jpg" onclick="showDescription('Bosi da nbat el yasmin w enty 3amla zayo kda 34an el yasmin aktr 7aga bytmyz beha eno pure w y4dk kda tngzblo')">
-     <img src="pizza.jpg" onclick="showDescription('Aho el pizza de zay ma hya 8r2ana fe el gebna enty kman 8r2ana fe tfasel w 7ekayat w 3ndk 7agat 7elwa kteer awi w kolhom 3la ba3d bytl3o 7aga gamda gdn')">
-     <img src="manga.jpg" onclick="showDescription('Aho enty btfkrini b 3aser el manga da ynf3 fe ay wa2t w ay monsba m4 t2eel 3la el wa7ed mfee4 atnen y5tlfo 3leh sahl kda w ta3mo 7elw w tnbst w enta bt4rbo')">
-     <img src="dory.jpg" onclick="showDescription('Aho enty btfkrini b dory de gdn wrbna so8nona kda w btnsa bs tayba w gmeela gdn w 3asola')">
-     <img src="camera.jpg" onclick="showDescription('El hobby ely btfkrni beki hya el tsweer 34an el hobby de bthtm b el details awi w el wa2t w el la7za el monasba tefdl mstni w t7alel l8ayt lma tla2i el forsa el monasba w tek ta5od el sora b el details bta3tha')">
-
- 
+    <div class="img-card">
+        <img src="bird.jpg" onclick="showDescription('العصفورة دي بريئة ورقيقة جدًا... زيك بالضبط، صوتها هادي بس بيسيب أثر، وجمالها طبيعي مش محتاج شرح.')">
+    </div>
+    <div class="img-card">
+        <img src="sea.jpg" onclick="showDescription('البحر ده مش بس واسع، هو كمان مليان تفاصيل مخفية... بالضبط زي قلبك، هادي من بره، عميق من جوه.')">
+    </div>
+    <div class="img-card">
+        <img src="white.jpg" onclick="showDescription('اللون الأبيض نضيف وبريء... زي حضورك، يدي راحة وأمان في أي مكان.')">
+    </div>
+    <div class="img-card">
+        <img src="winter.jpg" onclick="showDescription('الشتا مزاجي شوية، بس دافي بمشاعره... نفس الإحساس اللي بتحس بيه لما تكون حوالي ناس بتحبهم.')">
+    </div>
+    <div class="img-card">
+        <img src="yasmin.jpg" onclick="showDescription('الياسمين ريحته تهدي القلب... وجودك كده، بسيط بس يخلي الدنيا أجمل.')">
+    </div>
+    <div class="img-card">
+        <img src="pizza.jpg" onclick="showDescription('البيتزا فيها ألف طعم، وكل طعم حكاية... كأنك بتجمعي بين البساطة والعمق، ومافيش حد بيقاومك.')">
+    </div>
+    <div class="img-card">
+        <img src="manga.jpg" onclick="showDescription('عصير المانجا؟ حلو وسهل تحبه... زي طريقتك اللي تريح القلب بدون مجهود.')">
+    </div>
+    <div class="img-card">
+        <img src="dory.jpg" onclick="showDescription('دوري؟ بتحاول تفتكر، بتضحك، ودايمًا طيبة... مش كاملة بس جميلة بطريقتها.')">
+    </div>
+    <div class="img-card">
+        <img src="camera.jpg" onclick="showDescription('الكاميرا بتحب التفاصيل... زيك، بتحبي تشوفي الجمال اللي محدش بياخد باله منه.')">
+    </div>
 
     <div id="descBox">
         <p id="descText"></p>
